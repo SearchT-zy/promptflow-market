@@ -4,7 +4,7 @@
 
 > 🔗 开源仓库：https://github.com/SearchT-zy/promptflow-market · License: MIT
 
-> 完整产品需求见 [`PRD.md`](./PRD.md)（v1.0）。本仓库实现 MVP（V1.x）范围：跑通「上传 → 渲染 → 复制/导出」免费闭环（PRD §8.1）。
+> 本仓库实现 MVP（V1.x）范围：跑通「上传 → 渲染 → 复制/导出」免费闭环，全部模板免费。
 
 ## 功能（MVP 已实现）
 
@@ -23,14 +23,14 @@
 |---|---|
 | 后端 | Python 3.11 · FastAPI · SQLAlchemy 2（SQLite 开发 / PostgreSQL 生产）· PyJWT · bcrypt |
 | 前端 | React 18 · TypeScript · Vite 5 · Tailwind CSS 3 · react-router 6 |
-| 数据 | 17 张核心表（PRD §4），金额以「分」存储，UUID 字符串主键，JSON 字段跨库兼容 |
+| 数据 | 17 张核心表，金额以「分」存储，UUID 字符串主键，JSON 字段跨库兼容 |
 
 ## 目录结构
 
 ```
-promptflow/
-├── PRD.md                  # 产品需求文档
-├── docs/api-contract.md    # API 契约（前后端共同依据）
+promptflow-market/
+├── README.md                # 项目说明
+├── docs/api-contract.md     # API 契约（前后端共同依据）
 ├── backend/                # FastAPI 后端（/api/v1，共 30+ 端点）
 │   ├── app/
 │   │   ├── main.py         # 入口
@@ -86,7 +86,7 @@ npm run dev                  # http://localhost:5173（/api 已代理到 8000；
 4. 用 creator 登录 → Studio 新建链式模板 → 保存草稿 → 发布新版本 → 提交审核
 5. 用 admin 登录 → 后台审核队列 → 通过 → 模板出现在市场
 
-## MVP 未包含（PRD §8.2 → V2/V3）
+## MVP 未包含（→ V2/V3）
 
 支付/订单/提现/分成、订阅与 Pack、用户评价、企业 API Key 与计量、DAG 分支工作流、站内试运行、PG 中文分词（LIKE 兜底）。
 
