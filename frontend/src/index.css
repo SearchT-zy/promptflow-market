@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+.dark body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+/* ---------- Markdown 渲染样式（.md-body） ---------- */
+.md-body {
+  line-height: 1.7;
+  font-size: 0.925rem;
+  word-break: break-word;
+}
+.md-body > *:first-child {
+  margin-top: 0;
+}
+.md-body > *:last-child {
+  margin-bottom: 0;
+}
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4 {
+  font-weight: 600;
+  margin: 1.25em 0 0.5em;
+  line-height: 1.35;
+}
+.md-body h1 {
+  font-size: 1.4rem;
+}
+.md-body h2 {
+  font-size: 1.2rem;
+}
+.md-body h3 {
+  font-size: 1.05rem;
+}
+.md-body p {
+  margin: 0.6em 0;
+}
+.md-body ul,
+.md-body ol {
+  margin: 0.6em 0;
+  padding-left: 1.5rem;
+}
+.md-body ul {
+  list-style: disc;
+}
+.md-body ol {
+  list-style: decimal;
+}
+.md-body li {
+  margin: 0.2em 0;
+}
+.md-body a {
+  color: #3b82f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.md-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: rgba(127, 127, 127, 0.15);
+  padding: 0.1em 0.35em;
+  border-radius: 0.3rem;
+}
+.md-body pre {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+.dark .md-body pre {
+  background: rgba(0, 0, 0, 0.35);
+}
+.md-body pre code {
+  background: transparent;
+  padding: 0;
+}
+.md-body blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 0.9rem;
+  margin: 0.8em 0;
+  opacity: 0.85;
+}
+.md-body table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  width: 100%;
+  font-size: 0.85rem;
+}
+.md-body th,
+.md-body td {
+  border: 1px solid rgba(127, 127, 127, 0.35);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+.md-body th {
+  background: rgba(127, 127, 127, 0.12);
+  font-weight: 600;
+}
+.md-body hr {
+  border: none;
+  border-top: 1px solid rgba(127, 127, 127, 0.35);
+  margin: 1.2em 0;
+}
+.md-body img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+.md-body mark {
+  background: #fde047;
+  color: #1f2937;
+  padding: 0 0.15rem;
+  border-radius: 0.2rem;
+}
+
+/* ---------- 自定义滚动条 ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(127, 127, 127, 0.4) transparent;
+}
